@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <title>Atividade Extra</title>
+    <style>
+      pre code {
+        color: darkgreen;
+        font-size: larger;
+        background-color: #eee;
+        border: 1px solid #999;
+        display: block;
+        padding: 20px;
+      }
+    </style>
+    
+  </head>
+  <body>
+    <header>
+      <h1>
+        Códigos das questões 5 e 6 da atividade extra do dia 6 de Setembro.
+      </h1>
+    </header>
+    <main>
+      <div>
+        <h2>Questão 5</h2>
+        <pre>
+
+          <code>
+            // Typescript program
+            
+            class ControleDeAudio {
+              volume: number = 2;
+          
+              aumentarVolume(): void {
+                  if (this.volume <= 10){
+                      this.volume += 1;
+          
+                  }
+              }
+          
+              diminuirVolume(): void {
+                  if (this.volume > 0){
+                      this.volume -= 1;
+                  }
+              }
+          
+              getVolume(): number {
+                  return this.volume;
+              }
+            }
+          
+            let audio: ControleDeAudio = new ControleDeAudio();
+            
+            console.log(audio.getVolume());
+            
+            while(audio.volume < 10){
+                audio.aumentarVolume();
+            }
+            
+            console.log(audio.getVolume());
+            
+            
+            while(audio.volume > 0){
+                audio.diminuirVolume();
+            }
+            
+            console.log(audio.getVolume());
+          
+          </code>
+        </pre>
+
+      </div>
+
+      <div>
+        <h2>Questão 6</h2>
+        <pre>
+
+          <code>
+  
+            // Dart program
+  
+            void main() {
+  
+              ControleDeAudio audio = new ControleDeAudio();
+              
+              audio.aumentarVolume();
+              
+              print("O volume atual : ${audio.showVolume}");
+              for (var i = 0; i < 10; i++) {
+                audio.diminuirVolume();
+              }
+              
+              print("O volume atual : ${audio.showVolume}");
+            }
+  
+            class ControleDeAudio {
+              var volume = 2;
+  
+              int get showVolume {
+                return volume;
+              }
+  
+              void aumentarVolume() {
+                if (volume < 10) {
+                  volume += 1;
+                }
+              }
+  
+              void diminuirVolume() {
+                if (volume > 0) {
+                  volume -= 1;
+                }
+              }
+            }
+  
+          </code>
+        </pre>
+      </div>
+    </main>
+    <footer>A. Hamilton</footer>
+  </body>
+</html>
